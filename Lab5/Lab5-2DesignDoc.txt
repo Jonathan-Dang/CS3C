@@ -1,0 +1,57 @@
+Input
+    In detail, what are the inputs to this program?
+        PP6-45
+        -There is only one input for this program, the directory of the WAV file.
+        PP6-42
+        -There are two inputs for this program, both are directories to unique WAV files.
+    How will you validate the input?
+        PP6-45 AND PP6-42
+        -The Scryp.io function will throw an exception and end the code due to an invalid file directory.
+    Pseudocode: Briefly explain how this section will look.
+        PP6-45 AND PP6-42
+        Read a directory from console
+        Then put it into scipy.io.wavfile.read method.
+Processing
+    What does this program calculate?
+        PP6-45
+        -The program will reverse the given WAV file. 
+        PP6-42
+        -The program will mix and average the two given WAV files. 
+    Can you divide the calculations to the smaller “modules”?
+        PP6-45 AND PP6-42
+        -Yes, I divided the actual modification process from the main file. Otherwise, all the processes are simple and 
+        direct.
+    Pseudocode: Briefly explain how this(these) section(s) will look. 
+        PP6-45
+        -First, obtain data from the WAV file, then replicate the data and then reverse the list.
+            Create a new file and add the "-reverseValue" tag.
+        PP6-42
+        -First, obtain the data from the WAV files, then add both value for each sample together, averaging them.
+            Create a new file and add the "Mixed" tag.
+Output
+    What will this program display?
+        PP6-45
+        -The output would be a WAV file with the -reverseValue tag.
+        PP6-42
+        -The output would be a WAV file with the Mixed tag.
+    How will the output be formatted?
+        PP6-45
+        -"{FILENAME}-reverseValue.wav"
+        PP6-42
+        -"{FILENAME}Mixed.wav"
+    Pseudocode: Briefly explain how this section will look.
+        PP6-45 AND PP6-42
+        -Call the write function from the wavfile library, then put in the data, sample rate, and filename.
+Variables
+    What variables will this program require?
+        PP6-45 AND PP6-42
+        -I would need the filename, sample rate, and raw data.
+    How will you create variable names that are descriptive and conventionally styled?
+        PP6-45 AND PP6-42
+        -I will use a minimilistic style which would retain meaning in a more direct fasion.
+    Are there constant variables? How will you name them?
+        PP6-45 AND PP6-42
+        -There are no constant variables.
+    Which variables need to be reset if the user wants to repeat the program?
+        PP6-45 AND PP6-42
+        -The only variable that needs to be reset would be the file directory.

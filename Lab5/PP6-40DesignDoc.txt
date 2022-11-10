@@ -1,0 +1,33 @@
+Input
+    In detail, what are the inputs to this program?
+        -There is only one input for this program, the directory of the WAV file.
+    How will you validate the input?
+        -The Scryp.io function will throw an exception and end the code due to an invalid file directory.
+    Pseudocode: Briefly explain how this section will look.
+        Read a directory from console
+        Then put it into scipy.io.wavfile.read method.
+Processing
+    What does this program calculate?
+        -The program will modify the volume of the given WAV file, first starting from 0%, then go to 100%.
+    Can you divide the calculations to the smaller “modules”?
+        -Yes, I divided the actual modification process from the main file. Otherwise, all the processes are simple and 
+        direct.
+    Pseudocode: Briefly explain how this(these) section(s) will look. 
+        -Obtain the data from the opened file, modify the data in which would produce a fade in sound.
+        Then return the file as a new one with the ".out" nametag.
+Output
+    What will this program display?
+        -The output would be a WAV file with the .out tag.
+    How will the output be formatted?
+        -"{FILENAME}.out.wav"
+    Pseudocode: Briefly explain how this section will look.
+        -Call the write function from the wavfile library, then put in the data, sample rate, and filename.
+Variables
+    What variables will this program require?
+        -I would need the filename, sample rate, and raw data.
+    How will you create variable names that are descriptive and conventionally styled?
+        -I will use a minimilistic style which would retain meaning in a more direct fasion.
+    Are there constant variables? How will you name them?
+        -There are no constant variables.
+    Which variables need to be reset if the user wants to repeat the program?
+        -The only variable that needs to be reset would be the file directory.

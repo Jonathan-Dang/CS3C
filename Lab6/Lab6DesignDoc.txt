@@ -1,0 +1,48 @@
+Input
+    In detail, what are the inputs to this program?
+        -PP7-20: Within the command line, takes in an input of formatted py encryption.py [-d] -k{key} (input) (output)
+        -PP7-21: Within the command line, take in an input of formatted py codeCracker.py (input)
+    How will you validate the input?
+        -PP7-20: The system itself will crash if there is an invalid input. Also, if there is no key, nor exactly two files,
+                    it will return with the usage message.
+        -PP7-21: The system itself will crash if there is an invalid input.
+    Pseudocode: Briefly explain how this section will look.
+        Using a try except block, we access argv and see whether it is a command or a file. Then open all the files and save the commands.
+Processing
+    What does this program calculate?
+        -PP7-20: The program encrypts/decrypts a given text file.
+        -PP7-21: The program counts and displays the frequency of each character.
+    Can you divide the calculations to the smaller “modules”?
+        [BOTH]: Nothing in particular could be broken down further into smaller modules. Everything
+                That is needed to be seperated has already been done so and documentation is 
+                provided within those files.
+    Pseudocode: Briefly explain how this(these) section(s) will look.
+        [BOTH] - Interpretation of the solution made me generate code that uses heap memory in order to process 
+                 the encrypting/decrypting/frequency detection process in an easier to think manner.
+        -PP7-20: Call the encrypt/decrypt function from CryptographyToolbox.py,
+                 it will then proceed to create a cypher set based on the given key.
+                 Then it will encrypt/decrypt the given text file.
+        -PP7-21: Run through the encrypted message and count each character's frequency. Then display the results.
+Output
+    What will this program display?
+        -PP7-20: It will output into a text file depending on what mode it is in.
+        -PP7-21: The statistics of each letter's frequency.
+    How will the output be formatted?
+        -PP7-20: It will be formatted exactly as described in the cypher text.
+        -PP7-21: It will be formatted exactly as described in the prompt.
+    Pseudocode: Briefly explain how this section will look.
+        [BOTH] - N/a
+Variables
+    What variables will this program require?
+        -PP7-20: Two constant global variables for the upper and lowercase versions of the alphabet.
+                 Str containers to hold input and output files.
+                 Key container to hold the actual key for encrypting and decrypting.
+                 decryption flag to determine mode.
+        -PP7-21: One constant global variable for the alphabet.
+    How will you create variable names that are descriptive and conventionally styled?
+        [BOTH] - The variable names are very conventional and direct. There is no need for further thought.
+    Are there constant variables? How will you name them?
+        [BOTH] - Yes, they are for the alphabet and will be named either alpha for the alphabet,
+                 or the case it will be in, Upper or lower.
+    Which variables need to be reset if the user wants to repeat the program?
+        [BOTH] - Neither have to be reset as every run, the program will restore itself.

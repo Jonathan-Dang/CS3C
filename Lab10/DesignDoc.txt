@@ -1,0 +1,113 @@
+Classes Used:
+    [PP9.26|Customer]
+    [PP9.27|Customer {MODIFIED FROM PP9.26}]
+{Intended Purpose}
+    The Customer class in both assignments are supposed to keep track of the amount of money spent at the
+    store(s) in which they would calculate a $10 discount.
+{Variables Used}
+    [PP9.26]
+        [Customer]
+            _next_discount_ : FLOAT
+            _discountNow_ : BOOLEAN
+    [PP9.27]
+        [Customer]
+            _next_discount_ : FLOAT
+            _discountNow_ : BOOLEAN
+            _shopTracker_ : LIST -> [BOOLEAN]
+{Functions}
+    [PP9.26]
+        [Customer]
+            •   getCurrentDiscountProgress() : FLOAT
+            •   getDiscountAvailable() : BOOLEAN
+            •   makePurchase(price: FLOAT) : NONE -> RuntimeException
+            •   _discountReached_() : NONE
+    [PP9.27]
+        [Customer]
+            •   getCurrentDiscountProgress() : TUPLE
+            •   getDiscountAvailable() : BOOLEAN
+            •   makePurchase(price: FLOAT, shop: INT) : NONE -> RuntimeException
+            •   _discountReached_() : NONE
+            •   _checkShopValidity_() : BOOLEAN
+{Functions Documentation}
+    [PP9.26]
+        [Customer]
+            •   getCurrentDiscountProgress() : FLOAT
+                    INPUT: NONE
+                    PROCESS: Returns to the user the _next_discount_ variable
+                    OUTPUT: FLOAT in range [0,infinity)
+            •   getDiscountAvailable() : BOOLEAN
+                    INPUT: NONE
+                    PROCESS: Returns to the user the _discountNow_ variable
+                    OUTPUT: BOOLEAN -> True : Next purchase has a 10 dollar discount.
+            •   makePurchase(price: FLOAT) : NONE
+                    INPUT: Valid Price [0, infinity) -> Raises RuntimeException if not Valid
+                    PROCESS: Validates the price and then adds it to the _next_discount_ variable. 
+                                Then checks the discount validity by calling the _discountReached_ function.
+                                If the _discountNow_ variable is True, then apply the discount and clears the 
+                                _discountNow_ variable.
+                    OUTPUT: NONE -> Mutated the object
+            •   _discountReached_() : NONE
+                    INPUT: NONE
+                    PROCESS: Checks if the _next_discount_ variables is positive after subtracting 100.
+                                If True, then modulus the variable then sets the _discountNow_ variable to True.
+                    OUTPUT: NONE -> Mutated the object.
+    [PP9.27]
+        [Customer]
+            •   getCurrentDiscountProgress() : TUPLE
+                    INPUT: NONE
+                    PROCESS: Returns to the user the _next_discount_ variable
+                    OUTPUT: FLOAT in range [0,infinity) and BOOLEAN in TUPLE form.
+            •   getDiscountAvailable() : BOOLEAN
+                    INPUT: NONE
+                    PROCESS: Returns to the user the _discountNow_ variable
+                    OUTPUT: BOOLEAN -> True : Next purchase has a 10 dollar discount.
+            •   makePurchase(price: FLOAT, shop: INT) : NONE -> RuntimeException
+                    INPUT: Valid Price [0, infinity) -> Raises RuntimeException if not Valid
+                                , Valid shop [1,20] -> Raises RuntimeException if not Valid
+                    PROCESS: Validates the price and shop number, then adds it to the _next_discount_ variable. 
+                                Then checks the discount validity by calling the _discountReached_ function.
+                                It also sets the shop number in the _shopTracker_ list variable to True.
+                                If the _discountNow_ variable is True, then apply the discount and clears the 
+                                _discountNow_ variable.
+                    OUTPUT: NONE -> Mutated the object
+            •   _discountReached_() : NONE
+                    INPUT: NONE
+                    PROCESS: Checks if the _next_discount_ variables is positive after subtracting 100 and 
+                                sees if 3 shops has been shopped at.
+                                If True, then modulus the variable then sets the _discountNow_ variable to True.
+                    OUTPUT: NONE -> Mutated the object.
+            •   _checkShopValidity_() : BOOLEAN
+                    INPUT: NONE
+                    PROCESS: Checks the _shopTracker_ list variable for three instances of True BOOLEAN values.
+                                If there are +3, then return True
+                    OUTPUT: True if there are atleast 3 shops shopped at.
+
+Input
+    In detail, what are the inputs to this program?
+        [BOTH] - There are no inputs in this program as the testing functions are fully automatic.
+    How will you validate the input?
+        [BOTH] - N/a
+    Pseudocode: Briefly explain how this section will look.
+        [BOTH] - N/a
+Processing
+    What does this program calculate?
+        [PP9.26] - Checks the accuracy and validity of the Customer Class for 1 shop.
+        [PP9.27] - Checks the accuracy and validity of the Customer Class for 20 shops.
+    Can you divide the calculations to the smaller “modules”?
+        [BOTH] - All processes are divided up already into smaller modules in the class itself.
+                {SEE CLASSES ABOVE}
+Output
+    What will this program display?
+        [BOTH] - Stages of either successful or failed tests will be displayed when ran.
+    How will the output be formatted?
+        [BOTH] - It will display the projected output then the actual output together line by line
+                 per test.
+Variables
+    What variables will this program require?
+        [BOTH] - Atleast 2 Customer objects.
+    How will you create variable names that are descriptive and conventionally styled?
+        [BOTH] - They are labled c1 and c2 as to refer to the test number they are accompanied with.
+    Are there constant variables? How will you name them?
+        [BOTH] - NONE
+    Which variables need to be reset if the user wants to repeat the program?
+        [BOTH] - NONE

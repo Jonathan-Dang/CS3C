@@ -1,0 +1,19 @@
+Symmetric-Key Cryptography
+Public-key cryptography is the greatest tool of liberty ever devised. Its discovery was revolutionary. Before then,
+ all cryptography was just hacks. It was developed in 1973 by Ellis, Cocks, and Williamson at researchers at CGHQ 
+ in the UK, but this work was classified until 1997. It was developed independently 1976 by Rivest, Shamir, and 
+ Adleman at MIT. Their work was published, although it was protected by a patent until 2000. Finally it is free.
+
+To understand it, however, it will be necessary to go over the basics of symmetric-key cryptography, which is the 
+sort of cryptography we are intuitively familiar with, the kind that has existed since antiquity. Once the limitations
+ of symmetric-key cryptography are understood, then public-key cryptography will seem like magic.
+
+Begin by thinking about the idea of a simple substitution cypher. This means that the message is a string of text 
+and encryption consists of replacing each letter with a different one. For example, can you solve the following code?
+
+JHBYEUXRBLPDWJXOBELNEHNTBFYDJHBWDCYUWJWLNUUWZBDJXLYERWRJRWEIBBCWEGJHBWDOYEBXWEJHBWDYSECYLIBJRUXRNEMBDRCYYEBD
+Two things to note here. First, this algorithm is insecure. Regardless of how the letters are replaced, it would be 
+easy to decipher, especially with a computer. We will need something much more complicated to make a message that is 
+secret enough. More importantly, however, is that knowing the sequence of letter replacements is sufficient both to 
+decrypt and to encrypt a message. It is, in fact, impossible to know how to encrypt a message without simultaneously 
+knowing how to decrypt it.

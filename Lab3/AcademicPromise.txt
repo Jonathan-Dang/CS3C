@@ -1,0 +1,9 @@
+This assignment was created and written with my own work (Or additionally with the help of this week's partner)
+and I(we) promise that we held academic integrity at all times during this assignment.
+If I(we) have been inclined to create something based of off another's work, I(we) will include 
+specific details pertaining to the assignment within the .py file of each project.
+I(we) did not seek outside assistance that would violate academic integrity at any point in time, before and to the future
+of this class.
+-Jonathan Dang
+
+-{Week 4 Lab} We did not work together as we decided it would be too easy if we did it together.
