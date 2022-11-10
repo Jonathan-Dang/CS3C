@@ -1,0 +1,34 @@
+Section 1:
+    In this programming project, we have to take a length 5 string and break it up into 5 single digit integers, then output them.
+
+Section 2:
+    Lets say that we obtain the number 16384. We seperate the number into 5 subdivisions. We can place this into their own integer variable.
+    Then we can print to screen each one seperated by a single space character.
+
+Section 3:
+    Given any number that is length 5, we will ask the user to input a number.
+    Upon getting that number, we must verify the length of the number to ensure our calculations are processed.
+    After checking the input, we will seperate the string into 5 different variables, one for each number.
+    We will be doing this by using array calling through the string from input.
+    Then we can print to screen each variable seperated by a space character.
+
+Section 4:
+    Variables:
+        userInput - string
+        First - char/int
+        Second - char/int
+        third - char/int
+        fourth - char/int
+        fifth - char/int
+
+Section 5 & 6:
+    Take input:
+        Loop indefinitely until valid input:
+        userInput = input("Please enter a 5 digit number[10000 -> 99999]: ")
+        if(len(userInput) != 5):
+            print("Invalid input")
+        else:
+            break;
+    Output:
+        first = userInput[0]; second = userInput[1]; third = userInput[2]; fourth = userInput[3]; fifth = userInput[4]
+        print(first + ' ' + second + ' ' + third + ' ' + fourth + ' ' + fifth)

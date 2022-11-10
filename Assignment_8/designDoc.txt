@@ -1,0 +1,32 @@
+Input
+    In detail, what are the inputs to this program?
+        [PP8-17] - CSV File name/ Directory
+        [PP8-25] - CSV File Name / Directory and categories being seen and amount to be seen
+    How will you validate the input?
+        [BOTH] - If any errors occur, raise an exception and exit the program.
+    Pseudocode: Briefly explain how this section will look.
+        Some Error Occurs past Input: -> raise Exception (#See Note on exception itself)
+Processing
+    What does this program calculate?
+        [PP8-17] - Displays the data of a specific country in cis_factbook.csv
+        [PP8-25] - Displays the top and bottom 5 of a certain category in cis_factbook
+    Can you divide the calculations to the smaller “modules”?
+        No, All calculations are divided up already within each file.
+    Pseudocode: Briefly explain how this(these) section(s) will look. 
+Output
+    What will this program display?
+        [PP8-17] - Displays the data of a specific country in cis_factbook.csv
+        [PP8-25] - Displays the top and bottom 5 of a certain category in cis_factbook
+    How will the output be formatted?
+        [BOTH] - Indented properly identifying the data set with the country name.
+    Pseudocode: Briefly explain how this section will look.
+Variables
+    What variables will this program require?
+        [PP8-17] - a few empty lists to hold user input
+        [PP8-25] - a few empty lists
+    How will you create variable names that are descriptive and conventionally styled?
+        [BOTH] - Very conventionally named.
+    Are there constant variables? How will you name them?
+        N/A
+    Which variables need to be reset if the user wants to repeat the program?
+        Automatic reset.

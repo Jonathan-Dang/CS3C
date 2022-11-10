@@ -1,0 +1,41 @@
+Input
+    In detail, what are the inputs to this program?
+        PP7-5: The input is just a singular directory to a text file.
+        PP7-6: The input is within console as py find.py {word} {input}
+    How will you validate the input?
+        PP7-5: Invalid input would essentially call a File-Not-Found error exception.
+        PP7-6: Invalid input would raise an exception caught at the try,except block, reseting the program.
+    Pseudocode: Briefly explain how this section will look.
+        PP7-5: N/a
+        PP7-6: if word is empty, then raise an exception. If there is any other problems with input, then raise another exception.
+Processing
+    What does this program calculate?
+        PP7-5: The program would count each word, line and character and then outputs to screen.
+        PP7-6: The program would print out every line containing the word given in every input file.
+    Can you divide the calculations to the smaller “modules”?
+        No, none of these can be divided smaller modules.
+    Pseudocode: Briefly explain how this(these) section(s) will look. 
+        PP7-5: open the file, then for every line, count 1 for the line, split the line by each space, then count each word
+                And then count each alphabet character.
+        PP7-6: Open the files, take a word in and then split the line into words. Check the list if there is the word,
+                syntax sensitive, then print the line if it contains it.
+Output
+    What will this program display?
+        PP7-5: the amount of lines, words, and characters in a text file.
+        PP7-6: The line containing a desired word.
+    How will the output be formatted?
+        PP7-5: Line: #oflines, etc.
+        PP7-6: name of the file, followed by the line.
+    Pseudocode: Briefly explain how this section will look.
+        PP7-5: print statement with an fstring printing each variable.
+        PP7-6: print statement in a forloop for each line.
+Variables
+    What variables will this program require?
+        PP7-5: a counter variable for each section. Line, Word, Character.
+        PP7-6: A variable to hold the word, and a list to hold every file name.
+    How will you create variable names that are descriptive and conventionally styled?
+        Both: I labeled variable names that are straight and to the point.
+    Are there constant variables? How will you name them?
+        N/a
+    Which variables need to be reset if the user wants to repeat the program?
+        N/a

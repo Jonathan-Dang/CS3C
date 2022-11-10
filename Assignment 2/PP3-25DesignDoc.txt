@@ -1,0 +1,44 @@
+Section 1:
+    In this problem, there are two inputs:
+    • The taxable income
+    • The marital status
+    There is one output:
+    • The tax dependent on said income and martial status.
+
+Section 2:
+    Lets assume we have a married couple whose combined income is in between $64,000
+    and $16,000. In the tax bracket, it is said that we have to start off with a base of 
+    $1,600 and then add 15% of the total income as tax. If we have a single person making over 
+    $32,000, then we would start with $4,400 then add 25% of their income.
+
+Section 3:
+    To calculate the tax, we would have to run the data through a bracket. Comparing the 
+    data entered to set values. income < ##,### etc. This is also checked with if the person
+    filing is married or not. Then calculating the tax is simply
+    tax = (tax constant) + income * (Percentage bracket)
+
+Section 4:
+    •Income
+    •Married
+    •Tax
+
+Section 5 & 6:
+    if (married == 'y' or married == 'Y'):
+    married = True
+    else:
+    married = False
+
+    if(married):
+    if(income > 64000):
+        tax = 8800 + income*.25   
+    elif(income < 64000 and income > 16000):
+        tax = 1600 + income*.15
+    elif(income <= 16000):
+        tax = income*.1
+    else:    
+    if(income > 32000):
+        tax = 4400 + income*.25   
+    elif(income < 32000 and income > 8000):
+        tax = 800 + income*.15
+    elif(income <= 8000):
+        tax = income*.1

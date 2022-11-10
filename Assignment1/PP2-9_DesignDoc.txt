@@ -1,0 +1,49 @@
+NOTE: Due to this specific assignment being apart of the tutorial 2.1, majority of this specific design document will be from that same article.
+        Accomidations will be added to account for the addition of user-input quarters.
+
+Section 1:
+    In this problem, there are three inputs:
+        •The denomination of the bill that the customer inserts
+        •The denominatino of the amount of quarters the customer inserts
+        •The price of the purchased item
+    There are two desired outputs: 
+        •The number of dollar coins that the machine returns
+        •The number of quarters that the machine returns
+
+Section 2:
+    Let's assume that a customer purchased an item that cost $2.25 and inserted a $5 bill. The customer is due $2.75, or two dollar coins and three quarters, in change.
+    Secondly, we can also assume a customer purchased an item costing $3.50 and inserted 3 $1 bills and 2 quarters. This is exact change, so no change will be given.
+
+Section 3: 
+    Given an arbitrary item price and payment, how can you compute the coins due? First, compute the change due in pennies:
+    change due = 100 x bill value + 25 x quarter value - item price in pennies
+    To get the dollars, divide by 100 and discard the fractional part:
+    num dollar coins = change due divided by 100 (without the fractional part)
+    To get the quarters, divide by 25 and discard the fractional part:
+    If you prefer, you can use the Python symbol for floor division:
+    num dollar coins = change due // 100
+    But you don't have to. The purpose of pseudocode is to describe the computation in a humanly readable form, not to use the syntax of a particular programming language.
+    The remaining change due can be computed in two ways. If you are aware that one can compute the remainder of a floor division (in Python, with the modulus operator), you can simply compute
+    change due = remainder of dividing change due by 100
+    Alternatively, subtract the penny value of the dollar coins from the change due:
+    change due = change due - 100 x num dollar coins
+    To get the quarters due, divide by 25:
+    num quarters = change due // 25
+    Note that our use of floor division means that if prices are not multiples of 25, any excess pennies due the customer are ignored.
+Section 4:
+    •billValue
+    •quarterValue
+    •itemPrice
+    •changeDue
+    •dollarCoins
+    •quarters
+Section 5 & 6:
+    # Compute change due.
+    changeDue = PENNIES_PER_DOLLAR * billValue + PENNIES_PER_QUARTER * quarterValue - itemPrice
+    dollarCoins = changeDue // PENNIES_PER_DOLLAR
+    changeDue = changeDue % PENNIES_PER_DOLLAR
+    quarters = changeDue // PENNIES_PER_QUARTER
+
+    # Print change due.
+    print("Dollar coins: %6d" % dollarCoins)
+    print("Quarters:     %6d" % quarters)

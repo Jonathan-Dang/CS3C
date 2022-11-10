@@ -1,0 +1,53 @@
+Section 1:
+    In this problem, there is only 1 input in the form on a string taken from the user.
+    This string can contain anything.
+    The output are printed statements that display certain characteristics of the string.
+
+Section 2:
+    Let's assume that the string is "Hello". The program would then state that the string has
+    only characters and starts with a capital letter. If the string was "HELLO", then along with
+    the previous outputs, it would print all caps.
+
+Section 3:
+    First, given a string, we would have to check for each flag. The problem states the follow flags:
+    •contains only letters.
+	•contains only uppercase letters.
+	•contains only lowercase letters.
+	•contains only digits.
+	•contains only letters and digits.
+	•starts with an uppercase letter.
+	•ends with a period.
+
+    To determine the upper vs lower case letters in the string, we need to confirm that all the 
+    characters are letters and not any other chars. Then we would traverse the entire string in order
+    to verify either fully Upper and fully Lower. For starting with an uppercase and ending with a period,
+    we only need to check the first and last characters of the string input. We do the same thing as we did 
+    for the upper and lower for digits.
+
+Section 4:
+    •userInput
+
+    -bool CheckAllCaps(string)
+    -bool CheckAllLower(string)
+    -bool CheckChars(string)
+    -bool CheckDigit(string)
+
+Section 5 & 6:
+    while(True):
+    userInput = input("Please input a string: ")
+    if(CheckAllCaps(userInput)):
+        print("Contains Only Capital letters")
+    if(CheckAllLower(userInput)):
+        print("Contains Only Lowercase letters")
+    if(CheckChars(userInput)):
+        print("Contains only Letters")
+    if(CheckDigit(userInput)):
+        print("Contains only Numbers")
+    if(userInput[0].isupper()):
+        print("First Letter is Uppercase")
+    if(userInput[len(userInput) - 1] == '.'):
+        print("Ends with a period!")
+        
+    sentinal = input("Repeat the process? y/n:")
+    if(sentinal == 'n' or sentinal == 'N'):
+        break;

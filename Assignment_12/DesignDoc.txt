@@ -1,0 +1,234 @@
+Class: gamebase
+    Input:
+        width : int
+        height : int
+
+    Variables: 
+        _width : int = (width)
+        _height : int = (height)
+        _display : pygame.display
+        _clock : pygame.time.Clock()
+        _framesPerSecond : int = 30
+        _sprites : pygame.sprite.LayeredUpdates()
+        _ticks : int = 0
+
+    Functions:
+        mouseButtonDown(x,y) -> None
+        keyDown(key) -> None
+        update() -> None
+        draw() -> None
+        add(sprite) -> None
+        getTicks() -> int
+        quit() -> None
+        run() -> None
+    
+        ##
+        #  mouseButtonDown(x,y):
+        #     Input: The location of the mouse when the button down event occurs.
+        #     Process: None
+        #     Output: None
+        #
+
+        ##
+        #  keyDown(key)
+        #     Input: A key press
+        #     Process: None
+        #     Output: None
+        #
+
+        ##
+        #  update()
+        #     Input: None
+        #     Process: Updates all monitored sprites
+        #  
+
+        ##
+        #  draw()
+        #     Input: None
+        #     Process: Draws all monitored sprites
+        #
+
+        ##
+        #  add(sprite)
+        #     Input: A sprite
+        #     Process: Adds a sprite to the game
+        #     Output: None
+        #
+
+        ##
+        #  getTicks()
+        #     Input: None
+        #     Process: None
+        #     Output: Returns the internal tick rate
+        #
+
+        ##
+        #  quit()
+        #     Input: None
+        #     Process: Quits the pygame internal system
+        #     Output: None
+        #
+
+        ##
+        #  run()
+        #     Input: None
+        #     Process: Runs the base game 
+        #     Output: None
+        #
+
+Class: ImageSprite() => Extends pygame.sprite.sprite
+    Input:
+        x : int
+        y : int
+        filename : string
+
+    Variables:
+        x : int -> Position horizontal
+        y : int -> Position Verticle
+        image : pygame.image -> sprite
+
+    Functions:
+        loadImage(x,y,filename) -> None
+        moveBy(dx,dy) -> None
+
+        ##
+        #  loadImage(x,y,filename):
+        #     Input: The position to spawn in the image as well as the image itself
+        #     Process: Loads the image into the current game screen at location x,y
+        #     Output: None
+        #
+
+        ##
+        #  moveBy(dx,dy):
+        #     Input: The change in position
+        #     Process: Moves the object by a certain amount dx,dy
+        #     Output: None
+        #
+
+Class: Snake() => Extends ImageSprite
+    Input:
+        x : int
+        y : int
+    
+    Variables:
+        _alive : boolean = True
+        _layer : int = 2
+        _win : boolean = False 
+
+    Functions:
+        keyDown(key) -> None : @Overload
+        die() -> None
+        win() -> None
+
+        ##
+        #  keyDown(key):
+        #     Input: Key
+        #     Process: Checks if certain directional keys are pressed, updates position
+        #     Output: None
+        #
+
+        ##
+        #   die():
+        #       Input: None
+        #       Process: "Kills" the entity
+        #       Output: None
+        #
+
+        ##
+        #   win():
+        #       Input: None
+        #       Process: Changes the _win variable to True
+        #       Output: None
+        #
+
+Class: Car => Extends ImageSprite
+    Input:
+        x : int
+        lane : int
+
+    Variables:
+        _lane : int = lane
+        y : const int = 300 + 200 * lane
+
+    Functions:
+        update() -> None
+
+        ##
+        #   update():
+        #       Input: None
+        #       Process: Updates the object to either auto-scroll left or right
+        #
+
+Class: SnakeGame => Extends gamebase
+    Input: 
+        None
+    
+    Variables:
+        -Same as Gamebase with added variables:
+            _snake : Snake(400, 600)
+            _frog : ImageSprite(400, 100, "frog.bmp")
+            _cars : pygame.sprite.Group()
+            _save : boolean = True
+            _showScoreBoard : boolean = True
+            SCOREBOARD_FILE : const string = "scoreboard.txt"
+            _usernameInput : boolean = False
+            _instanceUsername : str = ""
+            _input_rect : pygame.Rect() => (0,0,140,32)
+
+    Functions:
+        getScores() -> list
+        saveScores(name : str) -> None
+        addCar(lane : int) -> None
+        keyDown(key : pygame.event, event : pygame.event = None) -> None : @Overload
+        mouseButtonDown(x : int , y : int) -> None : @Overload
+        saveOnce() -> None
+        update() -> None : @Overload
+
+        ##
+        #   getScores():
+        #       Input: None
+        #       Process: Obtains the scores from the SCOREBOARD_FILE save.
+        #       Output: List containing all scores in rank order.
+        #
+
+        ##
+        #   saveScores(name : str):
+        #       Input: instance Username
+        #       Process: records and scores the current instance
+        #       Output: None
+        #
+        
+        ##
+        #   addCar(lane : int):
+        #       Input: either 0 or 1 for the selected lane
+        #       Process: Adds a Car object to the game
+        #       Output: None
+        #
+
+        ##
+        #   keyDown(key, event):
+        #       Input: Both the key pressed and the actual event object
+        #       Process: Detects a key and passess it to the Group object for further processing.
+        #       Output: None
+        #
+
+        ##
+        #   mouseButtonDown(x,y):
+        #       Input: A coordinate of where the mouse cursor is.
+        #       Process: Passes it to the Group object for further Processing.
+        #       Output: None
+        #
+
+        ##
+        #   saveOnce():
+        #       Input: None
+        #       Process: Limits the amount of saving per instance of dieing or winning the game.
+        #       Output: None
+        #
+
+        ##
+        #   update():
+        #       Input: None
+        #       Process: Updates all managed sprites and items.
+        #       Output: None
+        #   

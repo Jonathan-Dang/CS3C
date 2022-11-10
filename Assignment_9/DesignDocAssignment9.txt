@@ -1,0 +1,79 @@
+Step 1: Responsibilities
+    [PP9.6]
+        Classes: 
+            [Car]
+                This object/class is responsible to account for it's own fuel gage, fuel efficiency,
+                and any modifications to those values required when the user calls a function.
+    [PP9.10]
+        Classes:
+            [VotingMachine]
+                Holds the parties being voted for, the ballots being casted and any modifications 
+                to those values required when the user calls a function.
+Step 2: Public Interface
+    [PP9.6]
+        [Car]
+            •   addGas(amount: float)
+            •   drive(miles: float)
+            •   getGasLevel()
+    [PP9.10]
+        [VotingMachine]
+            •   vote(Party: String)
+            •   clearBallots()
+            •   getParties()
+            •   getBallotResults()
+Step 3: Documentation of the Public Interface
+    [PP9.6]
+        [Car]
+            ##
+            #   Car.addGas(amount)
+            #       Input: The amount, in gallons, of gas the user inputs
+            #       Output: The object, but mutated a certain amount of fuel up.
+            #
+
+            ##
+            #   Car.drive(miles)
+            #       Input: The distance in miles driven
+            #       Output: The object, but mutated a certain amount of fuel down.
+            #
+
+            ##
+            #   Car.getGasLevel()
+            #       Input: None
+            #       Output: A string version of the fuel, in gallons, left within the car.
+            #
+    [PP9.10]
+        [VotingMachine]
+            ##
+            #   VotingMachine.vote(party)
+            #       Input: The name of the party that the user is voting for.
+            #       Output: The object records the vote internally
+            #
+
+            ##
+            #   VotingMachine.clearBallots()
+            #       Input: None
+            #       Output: Clears the ballots
+            #
+
+            ##
+            #   VotingMachine.getParties()
+            #       Input: None
+            #       Output: Returns the available parties to vote for.
+            #
+
+            ##
+            #   VotingMachine.getBallotResults()
+            #       Input: None
+            #       Output: The results of the voting duration in dictionary form.
+            #
+Step 4: Determine Instance Variables
+    [PP9.6]
+        [Car]
+            •   Fuel_level : Float
+            •   Fuel_effeciency : Float
+    [PP9.10]
+        [VotingMachine]
+            •   votingSelections : List
+            •   ballots : List
+Step 5-7: Implement the Class and Test it!
+    This portion is given from the two python files.

@@ -1,0 +1,40 @@
+Input:
+    In detail, what are the inputs to this program?
+        There are no inputs for this specfic program. What this code does is simulate the situation of the Monty Hall Paradox.
+    How will you validate the input?
+        There are no inputs to validate for this program.
+    Pseudocode: Briefly explain how this section will look.
+        N/A
+Processing:
+    What does this program calculate?
+        This code processess the likely-hood of either switching your choice or staying with your initial choice would 
+        win you the prize.
+    Can you divide the calculations to the smaller “modules”?
+        This program itself is a small module in which that the processing is done within a few conditional statements.
+    Pseudocode: Briefly explain how this(these) section(s) will look. 
+        Generate two random values from 0-2
+        Check Whether or not the two values match.
+        If so, then add one to the tracker that is dedicated to Strategy two.
+        If not, then add one to the tracker that is dedicated to Strategy one.
+        Repeat this a number of times to lower the error percentage to a minimal amount. [Near Zero]
+        Then, divide both trackers by the amount of tests, to the 4 significant figures.
+Output:
+    What will this program display?
+        It shows the gathered raw data first, then shows the percentage out of the total amount of tests
+        of each strategy's success rate.
+    How will the output be formatted?
+        It will be formatted generally simply, by labeling each value.
+    Pseudocode: Briefly explain how this section will look.
+        Print out the raw data.
+        Then Print out the Percentage Win rate.
+Variables:
+    What variables will this program require?
+        We will need a Tuple that will contain 3 boolean values, two variables to store two random values from 0 to 2, 
+        and two trackers for the wins each strategy obtains.
+    How will you create variable names that are descriptive and conventionally styled?
+        They will be labeled in a minimalistic style, very direct and clear of what they are used for. 
+    Are there constant variables? How will you name them?
+        There are no constant variables in this program.
+    Which variables need to be reset if the user wants to repeat the program?
+        The variables reset themselves as the program runs and ends. The Tuple and the two random values are reset 
+        after each run of the internal simulation. This repeats to a set number. {10,000}
