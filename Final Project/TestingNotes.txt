@@ -1,0 +1,34 @@
+Testing Notes:
+
+Testing for the entire project is based on levels of completion.
+I did not progress the final until consistancy was proven, about 10-20 runs with the same outcome.
+Here is the compiled Stages I tested, in chronological Order:
+    Point -> Object -> repr + str + eq
+    Ship -> Object
+        -> Placement
+        -> setPosition
+        -> checkSunk
+    gameBoard -> repr + Init
+        -> Object -> getShipPosition
+        -> isPositionShip
+        -> PlaceShip
+        -> FIRE
+        -> Done
+        -> [DEPRECATED] Initi Fleet
+    Game Testing ----------- Placements of ships in gameBoard
+    BattleShipGame -> Object
+        -> init -> update -> Run -> draw
+        -> Get Tile At Position
+        -> Tile Coordinate Convertion
+        -> [DEPRECATED] SubRectanglePosition
+        -> Create Tile Rectangles 
+        -> hoveredTile
+    PlayerBoardBackground -> Object
+    -> Draw Grid
+    -> Convert Reference to Direction
+    -> Missed Ship Sprite + Ship Sprite
+    BattleShipGame -> Load methods
+        -> Run -> Improved
+        -> update -> Improved
+        -> Enemy AI -> Improved
+    Whole Game Runs: 50

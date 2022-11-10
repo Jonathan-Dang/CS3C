@@ -1,0 +1,7 @@
+What did you learn/implement that worked that you are most proud of.
+    -I think i'm most proud of the use of multiple groups to be interpreted as layer. 
+    Layering the sprites made the visuals easier to manage.
+What would you do differently (something that didn't work as well as you wished)? 
+    -The Enemy AI is something I don't really like as it could be so much smarter.
+    Taking an easy approach causes the enemy AI to be only a certain degree of smart.
+    I would have wanted to make something aligned with probrability scaling but I ran out of time.

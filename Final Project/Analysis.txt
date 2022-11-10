@@ -1,0 +1,13 @@
+What requirements are completed/covered?
+    - All Requirements for the final has been completed.
+What sections are missing?
+    - No Sections are missing.
+How would you enhancement this project?
+    - I think the BattleShipGame could be enhanced to allow for multiple
+        players to be played at the same time. 4+ people or any amount
+        that the screen size could handle.
+What references did you use?
+    - Generally, I used the documentation for pygame and python to learn
+        more about what I could work with, and reference sites like
+        Stack Overflow for certain interactions, such as Rectangle Unions
+        and Sprite Stacking.

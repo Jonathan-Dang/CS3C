@@ -1,0 +1,33 @@
+{
+    "Ships":[
+        {
+            "x":5,
+            "y":3,
+            "Orientation": "S"
+        },
+
+        {
+            "x":2,
+            "y":8,
+            "Orientation": "E"
+        },
+
+        {
+            "x":2,
+            "y":0,
+            "Orientation": "S"
+        },
+
+        {
+            "x":6,
+            "y":3,
+            "Orientation": "E"
+        },
+
+        {
+            "x":9,
+            "y":0,
+            "Orientation": "S"
+        }
+    ]
+}

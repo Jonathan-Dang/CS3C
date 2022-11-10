@@ -1,0 +1,282 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+<html><head><title>Python: module Ship</title>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+</head><body bgcolor="#f0f0f8">
+
+<table width="100%" cellspacing=0 cellpadding=2 border=0 summary="heading">
+<tr bgcolor="#7799ee">
+<td valign=bottom>&nbsp;<br>
+<font color="#ffffff" face="helvetica, arial">&nbsp;<br><big><big><strong>Ship</strong></big></big></font></td
+><td align=right valign=bottom
+><font color="#ffffff" face="helvetica, arial"><a href=".">index</a><br><a href="file:c%3A%5Cusers%5Cpocke%5Cdocuments%5Cpython%20repo%5Cfinal%20project%5Cship.py">c:\users\pocke\documents\python repo\final project\ship.py</a></font></td></tr></table>
+    <p><tt>This&nbsp;Module&nbsp;implements&nbsp;the&nbsp;<a href="#Ship">Ship</a>&nbsp;class,&nbsp;as&nbsp;well&nbsp;as&nbsp;associated&nbsp;Parts&nbsp;for&nbsp;the&nbsp;"BareBones"<br>
+of&nbsp;Battleship.</tt></p>
+<p>
+<table width="100%" cellspacing=0 cellpadding=2 border=0 summary="section">
+<tr bgcolor="#aa55cc">
+<td colspan=3 valign=bottom>&nbsp;<br>
+<font color="#ffffff" face="helvetica, arial"><big><strong>Modules</strong></big></font></td></tr>
+    
+<tr><td bgcolor="#aa55cc"><tt>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</tt></td><td>&nbsp;</td>
+<td width="100%"><table width="100%" summary="list"><tr><td width="25%" valign=top><a href="string.html">string</a><br>
+</td><td width="25%" valign=top></td><td width="25%" valign=top></td><td width="25%" valign=top></td></tr></table></td></tr></table><p>
+<table width="100%" cellspacing=0 cellpadding=2 border=0 summary="section">
+<tr bgcolor="#ee77aa">
+<td colspan=3 valign=bottom>&nbsp;<br>
+<font color="#ffffff" face="helvetica, arial"><big><strong>Classes</strong></big></font></td></tr>
+    
+<tr><td bgcolor="#ee77aa"><tt>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</tt></td><td>&nbsp;</td>
+<td width="100%"><dl>
+<dt><font face="helvetica, arial"><a href="builtins.html#ValueError">builtins.ValueError</a>(<a href="builtins.html#Exception">builtins.Exception</a>)
+</font></dt><dd>
+<dl>
+<dt><font face="helvetica, arial"><a href="Ship.html#ShipMispositionError">ShipMispositionError</a>
+</font></dt></dl>
+</dd>
+<dt><font face="helvetica, arial"><a href="builtins.html#object">builtins.object</a>
+</font></dt><dd>
+<dl>
+<dt><font face="helvetica, arial"><a href="Ship.html#Point">Point</a>
+</font></dt><dt><font face="helvetica, arial"><a href="Ship.html#Ship">Ship</a>
+</font></dt><dt><font face="helvetica, arial"><a href="Ship.html#gameBoard">gameBoard</a>
+</font></dt></dl>
+</dd>
+</dl>
+ <p>
+<table width="100%" cellspacing=0 cellpadding=2 border=0 summary="section">
+<tr bgcolor="#ffc8d8">
+<td colspan=3 valign=bottom>&nbsp;<br>
+<font color="#000000" face="helvetica, arial"><a name="Point">class <strong>Point</strong></a>(<a href="builtins.html#object">builtins.object</a>)</font></td></tr>
+    
+<tr bgcolor="#ffc8d8"><td rowspan=2><tt>&nbsp;&nbsp;&nbsp;</tt></td>
+<td colspan=2><tt><a href="#Point">Point</a>(x:&nbsp;int&nbsp;=&nbsp;-1,&nbsp;y:&nbsp;int&nbsp;=&nbsp;-1)&nbsp;-&amp;gt;&nbsp;None<br>
+&nbsp;<br>
+Object&nbsp;to&nbsp;store&nbsp;two&nbsp;integers&nbsp;in&nbsp;coordinate&nbsp;style.&nbsp;Restrictive&nbsp;version&nbsp;of&nbsp;a&nbsp;Tuple<br>&nbsp;</tt></td></tr>
+<tr><td>&nbsp;</td>
+<td width="100%">Methods defined here:<br>
+<dl><dt><a name="Point-__eq__"><strong>__eq__</strong></a>(self, rhs) -&gt; bool</dt><dd><tt>Sub-method&nbsp;that&nbsp;checks&nbsp;if&nbsp;the&nbsp;two&nbsp;objects&nbsp;are&nbsp;the&nbsp;same<br>
+&nbsp;&nbsp;&nbsp;&nbsp;<br>
+Args:<br>
+&nbsp;&nbsp;&nbsp;&nbsp;rhs&nbsp;(_type_):&nbsp;<a href="builtins.html#object">object</a>&nbsp;being&nbsp;compaired&nbsp;to<br>
+&nbsp;<br>
+Returns:<br>
+&nbsp;&nbsp;&nbsp;&nbsp;bool:&nbsp;True:&nbsp;if&nbsp;the&nbsp;<a href="builtins.html#object">object</a>&nbsp;instance&nbsp;is&nbsp;the&nbsp;same&nbsp;and&nbsp;if&nbsp;the&nbsp;x&nbsp;and&nbsp;y&nbsp;variables&nbsp;are&nbsp;equal</tt></dd></dl>
+
+<dl><dt><a name="Point-__init__"><strong>__init__</strong></a>(self, x: int = -1, y: int = -1) -&gt; None</dt><dd><tt>Args:<br>
+&nbsp;&nbsp;&nbsp;&nbsp;x&nbsp;(int,&nbsp;optional):&nbsp;Position&nbsp;of&nbsp;Coordinate's&nbsp;X&nbsp;variable.&nbsp;Defaults&nbsp;to&nbsp;-1.<br>
+&nbsp;&nbsp;&nbsp;&nbsp;y&nbsp;(int,&nbsp;optional):&nbsp;Position&nbsp;of&nbsp;Coordinate's&nbsp;Y&nbsp;variable.&nbsp;Defaults&nbsp;to&nbsp;-1.</tt></dd></dl>
+
+<dl><dt><a name="Point-__repr__"><strong>__repr__</strong></a>(self) -&gt; str</dt><dd><tt>Returns:<br>
+&nbsp;&nbsp;&nbsp;&nbsp;_type_:&nbsp;Representation&nbsp;of&nbsp;the&nbsp;coordinate</tt></dd></dl>
+
+<dl><dt><a name="Point-__str__"><strong>__str__</strong></a>(self) -&gt; str</dt><dd><tt>Returns&nbsp;a&nbsp;string&nbsp;version&nbsp;of&nbsp;the&nbsp;<a href="builtins.html#object">object</a><br>
+&nbsp;<br>
+Returns:<br>
+&nbsp;&nbsp;&nbsp;&nbsp;str:&nbsp;String&nbsp;version&nbsp;of&nbsp;the&nbsp;<a href="builtins.html#object">object</a></tt></dd></dl>
+
+<hr>
+Data descriptors defined here:<br>
+<dl><dt><strong>__dict__</strong></dt>
+<dd><tt>dictionary&nbsp;for&nbsp;instance&nbsp;variables&nbsp;(if&nbsp;defined)</tt></dd>
+</dl>
+<dl><dt><strong>__weakref__</strong></dt>
+<dd><tt>list&nbsp;of&nbsp;weak&nbsp;references&nbsp;to&nbsp;the&nbsp;object&nbsp;(if&nbsp;defined)</tt></dd>
+</dl>
+<hr>
+Data and other attributes defined here:<br>
+<dl><dt><strong>__hash__</strong> = None</dl>
+
+</td></tr></table> <p>
+<table width="100%" cellspacing=0 cellpadding=2 border=0 summary="section">
+<tr bgcolor="#ffc8d8">
+<td colspan=3 valign=bottom>&nbsp;<br>
+<font color="#000000" face="helvetica, arial"><a name="Ship">class <strong>Ship</strong></a>(<a href="builtins.html#object">builtins.object</a>)</font></td></tr>
+    
+<tr bgcolor="#ffc8d8"><td rowspan=2><tt>&nbsp;&nbsp;&nbsp;</tt></td>
+<td colspan=2><tt><a href="#Ship">Ship</a>(type:&nbsp;int&nbsp;=&nbsp;-1)&nbsp;-&amp;gt;&nbsp;None<br>
+&nbsp;<br>
+<a href="#Ship">Ship</a>&nbsp;<a href="builtins.html#object">object</a>&nbsp;that&nbsp;is&nbsp;the&nbsp;interactable&nbsp;<a href="builtins.html#object">object</a>&nbsp;of&nbsp;the&nbsp;Battleship!&nbsp;game.<br>&nbsp;</tt></td></tr>
+<tr><td>&nbsp;</td>
+<td width="100%">Methods defined here:<br>
+<dl><dt><a name="Ship-__init__"><strong>__init__</strong></a>(self, type: int = -1) -&gt; None</dt><dd><tt>Initialize&nbsp;self.&nbsp;&nbsp;See&nbsp;help(type(self))&nbsp;for&nbsp;accurate&nbsp;signature.</tt></dd></dl>
+
+<dl><dt><a name="Ship-setPosition"><strong>setPosition</strong></a>(self, x: int, y: int, orientation: str) -&gt; None</dt><dd><tt>Sets&nbsp;the&nbsp;position&nbsp;of&nbsp;the&nbsp;ship<br>
+&nbsp;<br>
+Args:<br>
+&nbsp;&nbsp;&nbsp;&nbsp;x&nbsp;(int):&nbsp;X&nbsp;position&nbsp;of&nbsp;the&nbsp;head&nbsp;of&nbsp;the&nbsp;ship<br>
+&nbsp;&nbsp;&nbsp;&nbsp;y&nbsp;(int):&nbsp;Y&nbsp;position&nbsp;of&nbsp;the&nbsp;head&nbsp;of&nbsp;the&nbsp;ship<br>
+&nbsp;&nbsp;&nbsp;&nbsp;orientation&nbsp;(str):&nbsp;The&nbsp;orientation&nbsp;for&nbsp;the&nbsp;rest&nbsp;of&nbsp;the&nbsp;ship<br>
+&nbsp;<br>
+Raises:<br>
+&nbsp;&nbsp;&nbsp;&nbsp;<a href="builtins.html#ValueError">ValueError</a>:99:&nbsp;Checks&nbsp;the&nbsp;orientation&nbsp;for&nbsp;a&nbsp;valid&nbsp;direction&nbsp;for&nbsp;proper&nbsp;placement.<br>
+&nbsp;<br>
+&nbsp;&nbsp;&nbsp;&nbsp;<a href="builtins.html#ValueError">ValueError</a>:116:&nbsp;Unforseen&nbsp;error&nbsp;catch.</tt></dd></dl>
+
+<hr>
+Data descriptors defined here:<br>
+<dl><dt><strong>__dict__</strong></dt>
+<dd><tt>dictionary&nbsp;for&nbsp;instance&nbsp;variables&nbsp;(if&nbsp;defined)</tt></dd>
+</dl>
+<dl><dt><strong>__weakref__</strong></dt>
+<dd><tt>list&nbsp;of&nbsp;weak&nbsp;references&nbsp;to&nbsp;the&nbsp;object&nbsp;(if&nbsp;defined)</tt></dd>
+</dl>
+</td></tr></table> <p>
+<table width="100%" cellspacing=0 cellpadding=2 border=0 summary="section">
+<tr bgcolor="#ffc8d8">
+<td colspan=3 valign=bottom>&nbsp;<br>
+<font color="#000000" face="helvetica, arial"><a name="ShipMispositionError">class <strong>ShipMispositionError</strong></a>(<a href="builtins.html#ValueError">builtins.ValueError</a>)</font></td></tr>
+    
+<tr bgcolor="#ffc8d8"><td rowspan=2><tt>&nbsp;&nbsp;&nbsp;</tt></td>
+<td colspan=2><tt><a href="#ShipMispositionError">ShipMispositionError</a>(*args:&nbsp;<a href="builtins.html#object">object</a>)&nbsp;-&amp;gt;&nbsp;None<br>
+&nbsp;<br>
+Error&nbsp;that&nbsp;signifies&nbsp;a&nbsp;miss-position&nbsp;of&nbsp;a&nbsp;ship.&nbsp;As&nbsp;such,&nbsp;extends&nbsp;<a href="builtins.html#ValueError">ValueError</a><br>
+&nbsp;<br>
+Args:<br>
+&nbsp;&nbsp;&nbsp;&nbsp;<a href="builtins.html#ValueError">ValueError</a>&nbsp;(_type_):&nbsp;Super&nbsp;Class<br>&nbsp;</tt></td></tr>
+<tr><td>&nbsp;</td>
+<td width="100%"><dl><dt>Method resolution order:</dt>
+<dd><a href="Ship.html#ShipMispositionError">ShipMispositionError</a></dd>
+<dd><a href="builtins.html#ValueError">builtins.ValueError</a></dd>
+<dd><a href="builtins.html#Exception">builtins.Exception</a></dd>
+<dd><a href="builtins.html#BaseException">builtins.BaseException</a></dd>
+<dd><a href="builtins.html#object">builtins.object</a></dd>
+</dl>
+<hr>
+Methods defined here:<br>
+<dl><dt><a name="ShipMispositionError-__init__"><strong>__init__</strong></a>(self, *args: object) -&gt; None</dt><dd><tt>Initializes&nbsp;an&nbsp;error</tt></dd></dl>
+
+<hr>
+Data descriptors defined here:<br>
+<dl><dt><strong>__weakref__</strong></dt>
+<dd><tt>list&nbsp;of&nbsp;weak&nbsp;references&nbsp;to&nbsp;the&nbsp;object&nbsp;(if&nbsp;defined)</tt></dd>
+</dl>
+<hr>
+Static methods inherited from <a href="builtins.html#ValueError">builtins.ValueError</a>:<br>
+<dl><dt><a name="ShipMispositionError-__new__"><strong>__new__</strong></a>(*args, **kwargs)<font color="#909090"><font face="helvetica, arial"> from <a href="builtins.html#type">builtins.type</a></font></font></dt><dd><tt>Create&nbsp;and&nbsp;return&nbsp;a&nbsp;new&nbsp;<a href="builtins.html#object">object</a>.&nbsp;&nbsp;See&nbsp;help(type)&nbsp;for&nbsp;accurate&nbsp;signature.</tt></dd></dl>
+
+<hr>
+Methods inherited from <a href="builtins.html#BaseException">builtins.BaseException</a>:<br>
+<dl><dt><a name="ShipMispositionError-__delattr__"><strong>__delattr__</strong></a>(self, name, /)</dt><dd><tt>Implement&nbsp;delattr(self,&nbsp;name).</tt></dd></dl>
+
+<dl><dt><a name="ShipMispositionError-__getattribute__"><strong>__getattribute__</strong></a>(self, name, /)</dt><dd><tt>Return&nbsp;getattr(self,&nbsp;name).</tt></dd></dl>
+
+<dl><dt><a name="ShipMispositionError-__reduce__"><strong>__reduce__</strong></a>(...)</dt><dd><tt>Helper&nbsp;for&nbsp;pickle.</tt></dd></dl>
+
+<dl><dt><a name="ShipMispositionError-__repr__"><strong>__repr__</strong></a>(self, /)</dt><dd><tt>Return&nbsp;repr(self).</tt></dd></dl>
+
+<dl><dt><a name="ShipMispositionError-__setattr__"><strong>__setattr__</strong></a>(self, name, value, /)</dt><dd><tt>Implement&nbsp;setattr(self,&nbsp;name,&nbsp;value).</tt></dd></dl>
+
+<dl><dt><a name="ShipMispositionError-__setstate__"><strong>__setstate__</strong></a>(...)</dt></dl>
+
+<dl><dt><a name="ShipMispositionError-__str__"><strong>__str__</strong></a>(self, /)</dt><dd><tt>Return&nbsp;str(self).</tt></dd></dl>
+
+<dl><dt><a name="ShipMispositionError-with_traceback"><strong>with_traceback</strong></a>(...)</dt><dd><tt>Exception.<a href="#ShipMispositionError-with_traceback">with_traceback</a>(tb)&nbsp;--<br>
+set&nbsp;self.<strong>__traceback__</strong>&nbsp;to&nbsp;tb&nbsp;and&nbsp;return&nbsp;self.</tt></dd></dl>
+
+<hr>
+Data descriptors inherited from <a href="builtins.html#BaseException">builtins.BaseException</a>:<br>
+<dl><dt><strong>__cause__</strong></dt>
+<dd><tt>exception&nbsp;cause</tt></dd>
+</dl>
+<dl><dt><strong>__context__</strong></dt>
+<dd><tt>exception&nbsp;context</tt></dd>
+</dl>
+<dl><dt><strong>__dict__</strong></dt>
+</dl>
+<dl><dt><strong>__suppress_context__</strong></dt>
+</dl>
+<dl><dt><strong>__traceback__</strong></dt>
+</dl>
+<dl><dt><strong>args</strong></dt>
+</dl>
+</td></tr></table> <p>
+<table width="100%" cellspacing=0 cellpadding=2 border=0 summary="section">
+<tr bgcolor="#ffc8d8">
+<td colspan=3 valign=bottom>&nbsp;<br>
+<font color="#000000" face="helvetica, arial"><a name="gameBoard">class <strong>gameBoard</strong></a>(<a href="builtins.html#object">builtins.object</a>)</font></td></tr>
+    
+<tr bgcolor="#ffc8d8"><td rowspan=2><tt>&nbsp;&nbsp;&nbsp;</tt></td>
+<td colspan=2><tt><a href="#gameBoard">gameBoard</a>(side_length:&nbsp;int&nbsp;=&nbsp;10)&nbsp;-&amp;gt;&nbsp;None<br>
+&nbsp;<br>
+Gameboard&nbsp;is&nbsp;the&nbsp;main&nbsp;interacting&nbsp;system&nbsp;of&nbsp;Battleship!<br>&nbsp;</tt></td></tr>
+<tr><td>&nbsp;</td>
+<td width="100%">Methods defined here:<br>
+<dl><dt><a name="gameBoard-Done"><strong>Done</strong></a>(self) -&gt; bool</dt><dd><tt>Checks&nbsp;if&nbsp;all&nbsp;ships&nbsp;are&nbsp;hit&nbsp;and&nbsp;Sunk<br>
+&nbsp;<br>
+Returns:<br>
+&nbsp;&nbsp;&nbsp;&nbsp;bool:&nbsp;True&nbsp;if&nbsp;all&nbsp;ships&nbsp;are&nbsp;hit&nbsp;and&nbsp;sunk</tt></dd></dl>
+
+<dl><dt><a name="gameBoard-FIRE"><strong>FIRE</strong></a>(self, x: int, y: int) -&gt; bool</dt><dd><tt>Fires&nbsp;at&nbsp;a&nbsp;location&nbsp;x,y&nbsp;|&nbsp;X&nbsp;and&nbsp;Y&nbsp;are&nbsp;in&nbsp;Coordinate&nbsp;Form.<br>
+&nbsp;<br>
+Args:<br>
+&nbsp;&nbsp;&nbsp;&nbsp;x&nbsp;(int):&nbsp;X&nbsp;coordinate&nbsp;of&nbsp;the&nbsp;shot&nbsp;taken<br>
+&nbsp;&nbsp;&nbsp;&nbsp;y&nbsp;(int):&nbsp;Y&nbsp;coordinate&nbsp;of&nbsp;the&nbsp;shot&nbsp;taken<br>
+&nbsp;<br>
+Returns:<br>
+&nbsp;&nbsp;&nbsp;&nbsp;bool:&nbsp;True&nbsp;if&nbsp;the&nbsp;the&nbsp;shot&nbsp;hit.</tt></dd></dl>
+
+<dl><dt><a name="gameBoard-__init__"><strong>__init__</strong></a>(self, side_length: int = 10) -&gt; None</dt><dd><tt>Inializing&nbsp;the&nbsp;gameboard<br>
+&nbsp;<br>
+Args:<br>
+&nbsp;&nbsp;&nbsp;&nbsp;side_length&nbsp;(int,&nbsp;optional):&nbsp;The&nbsp;length&nbsp;of&nbsp;this&nbsp;gameboard.&nbsp;Defaults&nbsp;to&nbsp;10.</tt></dd></dl>
+
+<dl><dt><a name="gameBoard-__repr__"><strong>__repr__</strong></a>(self) -&gt; str</dt><dd><tt>Return&nbsp;repr(self).</tt></dd></dl>
+
+<dl><dt><a name="gameBoard-getShipPositions"><strong>getShipPositions</strong></a>(self) -&gt; list[list]</dt><dd><tt>Obtains&nbsp;all&nbsp;the&nbsp;ship's&nbsp;positions&nbsp;in&nbsp;list&nbsp;form.<br>
+&nbsp;<br>
+Returns:<br>
+&nbsp;&nbsp;&nbsp;&nbsp;list[list]:&nbsp;Returns&nbsp;a&nbsp;list&nbsp;with&nbsp;all&nbsp;the&nbsp;lists&nbsp;of&nbsp;the&nbsp;ship's&nbsp;positions</tt></dd></dl>
+
+<dl><dt><a name="gameBoard-isPositionShip"><strong>isPositionShip</strong></a>(self, x: int, y: int) -&gt; bool</dt><dd><tt>Checks&nbsp;if&nbsp;the&nbsp;position&nbsp;X,Y&nbsp;is&nbsp;a&nbsp;ship|&nbsp;X&nbsp;and&nbsp;Y&nbsp;are&nbsp;in&nbsp;Coordinate&nbsp;Form<br>
+&nbsp;<br>
+Args:<br>
+&nbsp;&nbsp;&nbsp;&nbsp;x&nbsp;(int):&nbsp;X&nbsp;coordinate&nbsp;of&nbsp;the&nbsp;shot&nbsp;taken<br>
+&nbsp;&nbsp;&nbsp;&nbsp;y&nbsp;(int):&nbsp;Y&nbsp;coordinate&nbsp;of&nbsp;the&nbsp;shot&nbsp;taken<br>
+&nbsp;<br>
+Returns:<br>
+&nbsp;&nbsp;&nbsp;&nbsp;bool:&nbsp;True&nbsp;if&nbsp;the&nbsp;position&nbsp;is&nbsp;a&nbsp;<a href="#Ship">Ship</a></tt></dd></dl>
+
+<dl><dt><a name="gameBoard-placeShip"><strong>placeShip</strong></a>(self, x: int, y: int, ship: Ship.Ship, orientation: str) -&gt; bool</dt><dd><tt>Adds&nbsp;a&nbsp;ship&nbsp;to&nbsp;the&nbsp;game&nbsp;board.&nbsp;MAX&nbsp;OF&nbsp;5<br>
+&nbsp;<br>
+Args:<br>
+&nbsp;&nbsp;&nbsp;&nbsp;x&nbsp;(int):&nbsp;X&nbsp;coordinate&nbsp;of&nbsp;the&nbsp;head&nbsp;of&nbsp;the&nbsp;ship<br>
+&nbsp;&nbsp;&nbsp;&nbsp;y&nbsp;(int):&nbsp;Y&nbsp;coordinate&nbsp;of&nbsp;the&nbsp;head&nbsp;of&nbsp;the&nbsp;ship<br>
+&nbsp;&nbsp;&nbsp;&nbsp;ship&nbsp;(<a href="#Ship">Ship</a>):&nbsp;A&nbsp;ship&nbsp;to&nbsp;be&nbsp;placed.<br>
+&nbsp;&nbsp;&nbsp;&nbsp;orientation&nbsp;(str):&nbsp;Direction&nbsp;of&nbsp;the&nbsp;placement&nbsp;of&nbsp;the&nbsp;ship.<br>
+&nbsp;<br>
+Raises:<br>
+&nbsp;&nbsp;&nbsp;&nbsp;<a href="builtins.html#ValueError">ValueError</a>:265:&nbsp;Invalid&nbsp;Positional&nbsp;Input<br>
+&nbsp;<br>
+&nbsp;&nbsp;&nbsp;&nbsp;<a href="builtins.html#ValueError">ValueError</a>:270:&nbsp;Invalid&nbsp;Orientation<br>
+&nbsp;<br>
+&nbsp;&nbsp;&nbsp;&nbsp;<a href="builtins.html#ValueError">ValueError</a>:273:&nbsp;Maximum&nbsp;Ships&nbsp;Placed<br>
+&nbsp;<br>
+&nbsp;&nbsp;&nbsp;&nbsp;<a href="#ShipMispositionError">ShipMispositionError</a>:271:284:297:310:&nbsp;<a href="#Ship">Ship</a>&nbsp;Doesn't&nbsp;Fit&nbsp;into&nbsp;position&nbsp;specified<br>
+&nbsp;<br>
+&nbsp;&nbsp;&nbsp;&nbsp;<a href="#ShipMispositionError">ShipMispositionError</a>:275:288:301:214:&nbsp;<a href="#Ship">Ship</a>&nbsp;already&nbsp;present&nbsp;at&nbsp;the&nbsp;location<br>
+&nbsp;<br>
+Returns:<br>
+&nbsp;&nbsp;&nbsp;&nbsp;bool:&nbsp;True&nbsp;if&nbsp;successfully&nbsp;placed</tt></dd></dl>
+
+<hr>
+Data descriptors defined here:<br>
+<dl><dt><strong>__dict__</strong></dt>
+<dd><tt>dictionary&nbsp;for&nbsp;instance&nbsp;variables&nbsp;(if&nbsp;defined)</tt></dd>
+</dl>
+<dl><dt><strong>__weakref__</strong></dt>
+<dd><tt>list&nbsp;of&nbsp;weak&nbsp;references&nbsp;to&nbsp;the&nbsp;object&nbsp;(if&nbsp;defined)</tt></dd>
+</dl>
+</td></tr></table></td></tr></table><p>
+<table width="100%" cellspacing=0 cellpadding=2 border=0 summary="section">
+<tr bgcolor="#55aa55">
+<td colspan=3 valign=bottom>&nbsp;<br>
+<font color="#ffffff" face="helvetica, arial"><big><strong>Data</strong></big></font></td></tr>
+    
+<tr><td bgcolor="#55aa55"><tt>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</tt></td><td>&nbsp;</td>
+<td width="100%"><strong>ALPHABET</strong> = 'ABCDEFGHIJKLMNOPQRSTUVWXYZ'<br>
+<strong>DIRECTIONS</strong> = ['N', 'E', 'S', 'W']<br>
+<strong>DIRECTION_TRANSLATOR</strong> = {'E': 2, 'N': 1, 'S': 3, 'W': 4}<br>
+<strong>EMPTY_SPACE_INDICATOR</strong> = '<font color="#c040c0">\x00</font>'<br>
+<strong>SHIP_SIZES</strong> = {1: 5, 2: 4, 3: 3, 4: 3, 5: 2}<br>
+<strong>SHIP_TYPES</strong> = {1: 'Carrier', 2: 'Battleship', 3: 'Cruiser', 4: 'Submarine', 5: 'Destroyer'}</td></tr></table>
+</body></html>
